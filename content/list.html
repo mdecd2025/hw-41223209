@@ -142,11 +142,56 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Homework << <a href='Homework.html'>Previous</a> <a href='HW2.html'>Next</a> >> HW2<br /><h1>HW1</h1>
-<p>HW1 (5%): <span style="background-color: #ffff00;">建立由 Box 組成的平面四連桿機構 Webots 模擬場景</span></p>
-<p>操作影片標題: 國立虎尾科技大學 - 機械設計工程系 - cd2025 HW1 - 學員學號</p>
-<p></p>
-<br />Homework << <a href='Homework.html'>Previous</a> <a href='HW2.html'>Next</a> >> HW2</div>
+    <div id="tipue_search_content">repo << <a href='repo.html'>Previous</a> <a href='Homework.html'>Next</a> >> Homework<br /><h1>list</h1>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 從  Brython 程式庫中的 browser 導入 html, 可用來輸出超文件內容
+from browser import html
+# 建立 url 變數與網站中 2b 學員的學號與帳號資料 URL 網誌字串對應
+url = "https://mde.tw/list/2b.txt"
+# 利用 open() 物件中的 readlines() 方法, 取出網站中的資料並逐行放入數列中, 因此 data 的資料型別為數列
+data = open(url).readlines()
+# 進行資料查驗時, 印出 data 數列內容
+#print(data)
+# 因為學員資料中的第一列為標題, 因此有效資料從索引值 1 開始
+all_stud = data[1:]
+# 利用 len() 函式查驗 all_stud 數列有幾筆資料, 因為要與前後的字串併接, 因此利用 str() 將整數轉為字串
+print("總共有 " + str(len(all_stud)) + "名學員")</pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 從  Brython 程式庫中的 browser 導入 html, 可用來輸出超文件內容
+# 而所導入的 document 可以指向網頁中的特定 id 內容
+from browser import html, document
+# 建立 url 變數與網站中 2b 學員的學號與帳號資料 URL 網誌字串對應
+url = "https://mde.tw/list/2b.txt"
+# 利用 open() 物件中的 readlines() 方法, 取出網站中的資料並逐行放入數列中, 因此 data 的資料型別為數列
+data = open(url).readlines()
+# 進行資料查驗時, 印出 data 數列內容
+#print(data)
+# 因為學員資料中的第一列為標題, 因此有效資料從索引值 1 開始
+all_stud = data[1:]
+# 利用 len() 函式查驗 all_stud 數列有幾筆資料, 因為要與前後的字串併接, 因此利用 str() 將整數轉為字串
+print("總共有 " + str(len(all_stud)) + "名學員")
+# 
+# 利用 document[] 取得 id 為 "brython_div1" 的位置, 然後與 brython_div1 變數對應
+brython_div1 = document["brython_div1"]
+# 利用 Brython 的 "&lt;=" 特殊符號, 將右值帶有字串與超文件內容物件插入 brython_div1 變數所指定的位置
+# 其中利用 html.A 建立 anchor 標註物件, 第一個變數為 anchor 字串, 第二個變數則為 hyper text reference
+brython_div1 &lt;= "1. " + html.A("scrum-1", href="https://mdecd2025.github.io/hw-scrum-1")
+# 利用 html.BR() 插入 break 標註
+brython_div1 &lt;= html.BR()
+brython_div1 &lt;= "2. " + html.A("github.com", href="https://github.com")
+</pre>
+<p>課程名稱: 協同產品設計實習 - Collaborative Product Design Practice</p>
+<p>學員作業網站: <a href="https://mdecd2025.github.io/hw-41223209/">https://mdecd2025.github.io/hw-41223209/</a></p>
+<p>學員作業倉儲: <a href="https://github.com/mdecd2025/hw-41223209">https://github.com/mdecd2025/hw-41223209</a></p>
+<hr/>
+<p>課程代號: cd2025</p>
+<p>Teams 線上教學:</p>
+<p style="padding-left: 30px;">以 "學號@nfu.edu.tw" 登入<span> </span><a href="https://login.microsoftonline.com/">https://login.microsoftonline.com/</a><span> </span>Office 365</p>
+<p style="padding-left: 30px;">Teams 團隊代碼: <span>p5z4eku</span></p>
+<hr/>
+<p>課程評分:</p>
+<p style="padding-left: 30px;">Homework (30%) - 每週至少提交兩次與課程進度有關的內容, 完成後填回自評表單</p>
+<p style="padding-left: 30px;">Exam (40%) - 建立包含操作流程影片、心得以及提供檔案下載的網頁後填回自評表單</p>
+<p style="padding-left: 30px;">Final Report (30%) - 利用網頁內容進行簡報並提交 pdf 格式書面報告, 完成後填回自評表單</p>
+<p></p><br />repo << <a href='repo.html'>Previous</a> <a href='Homework.html'>Next</a> >> Homework</div>
         
     <!-- footer -->
       <div class="container">

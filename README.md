@@ -1,10 +1,6 @@
 # cmsimde_site
 
-https://mdecd2025.github.io/hw-41223203
-
 https://mdecd2025.github.io/hw-41223209
-
-https://mdecd2025.github.io/hw-41223201
 
 利用 init_replit 指令安裝所需 Python 模組
 
